@@ -1,3 +1,1 @@
-# Databricks
-
-Repository for scripts used in databricks learning project
+# Databricks BENECO Outage Data Pipeline
