@@ -62,7 +62,7 @@ The `affect` table is a junction table between the `interruptions` and `location
 
 The below entity relationship diagram describes the relationships among the entities in the database.
 
-![ER Diagram](/Volumes/beneco_pipeline/bronze/data/ERD.png)
+![ER Diagram](ERD.png)
 
 As detailed by the diagram:
 
