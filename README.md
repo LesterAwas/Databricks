@@ -36,13 +36,13 @@ The `feeder` table includes:
 The `interruptions` table includes:
 
 * `id` - an `INTEGER` that specifies the unique ID for the power interruption. This column therefore has the `PRIMARY KEY` constraint applied.
-* `text` - an `INTEGER` that specifies the unique ID for the power interruption. This column therefore has the `PRIMARY KEY` constraint applied.
+* `text` - contains the raw text from the power outage advisory post.
 * `type` - specifies what type of interruption the outage falls under as `STRING`. The type can fall under `scheduled`, `unscheduled`, or `emergency`.
-* `start` - specifies the date and time of the power interruption and is stored as `NUMERIC`.
-* `end` - specifies the date and time when the power was restored and is also stored as `NUMERIC`.
+* `start` - specifies the date and time of the power interruption and is stored as `STRING`. 
+* `end` - specifies the date and time when the power was restored and is also stored as `STRING`.
 * `remark` - this column specifies what the cause of the outage as `STRING`.
     * In the case of an unscheduled and emergency power outage, it will indicate the cause or incident leading to the outage. In the case of a scheduled power interruption, it will specify the maintenance activity done.
-    * All power interruptions will have a cause(for unscheduled/emergency) or activity(scheduled). If the cause of the outage is still not determined, it should display "cause still to be determined" hence the `DEFAULT` constraint with the said text.
+    * All power interruptions should have a cause(for unscheduled/emergency) or activity(scheduled). If the cause of the outage is not stated, the field will be null.
 
 #### Supply
 
